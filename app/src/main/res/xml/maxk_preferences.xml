@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+   
+    <PreferenceCategory
+        android:title						="@string/pref_settings">  
+        <CheckBoxPreference
+            android:key						="PUSH_MSG"
+            android:defaultValue			="true"
+            android:title					="@string/push_on"
+            android:summary					="@string/push_on_summary" > 
+        </CheckBoxPreference> 
+    </PreferenceCategory>
+ 
+     <!-- About
+    <PreferenceCategory
+        android:title						="@string/about_title"> 
+        <PreferenceScreen 
+            android:title					="@string/smart_video_for_ted" 
+            android:summary					="@string/ted_byline_long">
+        </PreferenceScreen> 
+        <PreferenceScreen 
+            android:title					="@string/st_feedback_title" 
+            android:summary					="@string/st_feedback_summary">
+            <intent 
+                android:action				="android.intent.action.VIEW" 
+                android:data				="mailto:seller.edicon@gmail.com" />
+        </PreferenceScreen> 
+         -->
+        <!--  
+        <com.edicon.video.utils.AboutDialogPreference
+        	android:key				="ABOUT_DIAGLOG_PREF"
+        	android:title			="@string/about_title"
+        	android:summary			="@string/about_title_summary" 
+        	android:id				="@+id/about_dialog_preference"
+        	android:dialogIcon		="@drawable/smart_video"
+        	android:negativeButtonText="@string/about_dialog_update"
+        	android:positiveButtonText="@string/about_dialog_yes"
+        	android:dialogTitle		="@string/about_dialog_title"
+        	android:dialogMessage	="@string/about_dialog_message"
+        	android:dialogLayout	="@layout/about_pref_layout" />  
+     
+    </PreferenceCategory>         -->    
+
+</PreferenceScreen>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/topBanner"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@color/top_banner"
+        android:gravity="center" >
+
+        <include
+            android:id="@+id/topTitleRightMenu_ref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            layout="@layout/top_title_right_menu" />
+
+        <TextView
+            android:id="@+id/topTitle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/topTitle_memberInfo"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/btnKatalk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_katokl"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btnSMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="5dip"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_letter"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/memberInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/main_view_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/memberImage"
+                android:layout_width="120dip"
+                android:layout_height="150dip"
+                android:layout_marginTop="3dip"
+                android:src="@drawable/member_photo" />
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    style="@style/memberInfoLayout"
+                    android:id="@+id/memberNameLayout"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:text="@string/ceo_name"
+                        android:textColor="@color/member_info_left"
+                        android:textStyle="bold"
+                        style="@style/memberInfoTopLeft" />
+
+                    <TextView
+                        style="@style/memberInfoRight"
+                        android:id="@+id/memberName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!--
+                <LinearLayout style="@style/memberInfoLayout" >
+
+                    <TextView
+                        style="@style/memberInfoTopLeft"
+                        android:text="@string/memberName" />
+
+                    <TextView
+                        android:id="@+id/memberName"
+                        style="@style/memberInfoRight"
+                        android:text="@string/memberName" />
+                </LinearLayout>
+
+
+                -->
+
+                <LinearLayout
+                    android:id="@+id/compNameLayout"
+                    style="@style/memberInfoLayout"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/memberInfoTopLeft"
+                        android:text="@string/comp_name" />
+
+                    <TextView
+                        android:id="@+id/compName"
+                        style="@style/memberInfoRight" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/memberInfoLayout"
+                    android:id="@+id/sinceDayLayout"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/memberInfoTopLeft"
+                        android:id="@+id/textView"
+                        android:text="@string/since_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/memberInfoRight"
+                        android:id="@+id/sinceDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/birthDayLayout"
+                    style="@style/memberInfoLayout"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/memberInfoTopLeft"
+                        android:text="@string/birth_day" />
+
+                    <TextView
+                        android:id="@+id/birthDay"
+                        style="@style/memberInfoRight" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout style="@style/memberInfoLayoutTouch" >
+
+                    <TextView
+                        style="@style/memberInfoLeft"
+                        android:text="@string/prod_name" />
+
+                    <TextView
+                        android:id="@+id/prodName"
+                        style="@style/memberInfoRight"
+                        android:text="@string/memberCompanyName" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/memberInfoLayoutTouch" >
+
+                    <TextView
+                        android:id="@+id/memberMobilePhone"
+                        style="@style/memberInfoLeft"
+                        android:text="@string/memberMobilePhone" />
+
+                    <TextView
+                        android:id="@+id/memberMobilePhoneNo"
+                        style="@style/memberInfoRight"
+                        android:text="@string/memberMobilePhoneNo" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/memberInfoLayoutTouch" >
+
+                    <TextView
+                        android:id="@+id/memberEmail"
+                        style="@style/memberInfoLeft"
+                        android:text="@string/memberEmail" />
+
+                    <TextView
+                        android:id="@+id/memberEmailAddr"
+                        style="@style/memberInfoRight"
+                        android:text="@string/memberEmailAddr" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/memberInfoLayoutTouch" >
+
+                    <TextView
+                        android:id="@+id/memberHomePage"
+                        style="@style/memberInfoLeft"
+                        android:text="@string/memberHomePage" />
+
+                    <TextView
+                        android:id="@+id/memberHomePageUrl"
+                        style="@style/memberInfoRight"
+                        android:text="@string/memberHomePageUrl" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/memberInfoLayoutTouch" >
+
+                    <TextView
+                        android:id="@+id/memberOffice"
+                        style="@style/memberInfoLeft"
+
+                        android:text="@string/memberOffice" />
+
+                    <TextView
+                        android:id="@+id/memberOfficeAddr"
+                        style="@style/memberInfoRight"
+                                                android:singleLine="false"
+                        android:maxLines="2"
+                        android:text="@string/memberOfficeAddr" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/memberInfoLayoutTouch" >
+
+                    <TextView
+                        android:id="@+id/memberHome"
+                        style="@style/memberInfoLeft"
+                        android:text="@string/memberHome" />
+
+                    <TextView
+                        android:id="@+id/memberHomeAddr"
+                        style="@style/memberInfoRight"
+                                                android:singleLine="false"
+                        android:maxLines="2"
+                        android:text="@string/memberHomeAddr" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/memberInfoLayoutTouch" >
+
+                    <TextView
+                        android:id="@+id/memberOfficeTel"
+                        style="@style/memberInfoLeft"
+                        android:text="@string/memberOfficeTel" />
+
+                    <TextView
+                        android:id="@+id/memberOfficeTelNo"
+                        style="@style/memberInfoRight"
+                        android:text="@string/memberOfficeTelNo" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/memberInfoLayoutTouch" >
+
+                    <TextView
+                        android:id="@+id/memberHomeTel"
+                        style="@style/memberInfoLeft"
+                        android:text="@string/memberHomeTel" />
+
+                    <TextView
+                        android:id="@+id/memberHomeTelNo"
+                        style="@style/memberInfoRight"
+                        android:text="@string/memberHomeTelNo" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/memberInfoLayoutTouch" >
+
+                    <TextView
+                        android:id="@+id/memberFax"
+                        style="@style/memberInfoLeft"
+                        android:text="@string/memberFax" />
+
+                    <TextView
+                        android:id="@+id/memberFaxNo"
+                        style="@style/memberInfoRight"
+                        android:text="@string/memberFaxNo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dip" >
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/menuBottom_ref"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/menu_bottom" />
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menuBottomlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/menu_bottom_bg" >
+
+    <Button
+        android:id="@+id/writePost"
+        style="@style/MenuBottom"
+        android:text="@android:string/ok"
+        android:visibility="visible" />
+
+    <include
+        android:layout_width="1dip"
+        android:layout_height="match_parent"
+        layout="@layout/menu_devider" />
+
+    <Button
+        android:id="@+id/cancelPost"
+        style="@style/MenuBottom"
+        android:text="@android:string/cancel"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/menuSetting"
+        style="@style/MenuBottom"
+        android:text="@string/menuSetting"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/menuLogin"
+        style="@style/MenuBottom"
+        android:text="@string/menuLogin"
+        android:visibility="gone" />
+
+</LinearLayout>

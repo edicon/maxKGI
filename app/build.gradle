@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+
+android {
+    useLibrary 'org.apache.http.legacy'
+
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId 'com.maxk.notebook.maxkgi'
+        minSdkVersion 16
+        targetSdkVersion 26
+
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        // {disable/enable/check} 'aa', 'bb'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            // proguardFiles 'proguard-rules.txt'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    signingConfigs {
+        playStore {
+            keyAlias 'edicon'
+            keyPassword 'klb1107'
+            storeFile file('/Users/Edicon/cloudBox/Dropbox/repository/andRelease/release/key/Release-kxx1xx7.Key')
+            storePassword 'klb1107'
+        }
+    }
+
+    productFlavors {
+        playStoreConfig {
+            signingConfig signingConfigs.playStore
+            versionCode 20190319
+            versionName 'KGI-V1.6'
+            minSdkVersion 16
+            applicationId 'com.maxk.notebook.maxkgi'
+            targetSdkVersion 26
+        }
+    }
+}
+
+allprojects {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:deprecation" << "-Xlint:unchecked"
+    }
+}
+
+dependencies {
+    compile project(':libGoogleSpreadSheetREST')
+    // compile project(':kakaoSDK')
+    // compile project(':libMarket')
+    // compile project(':libKaKao')
+    compile project(':libAds')
+    compile project(':libVolly')
+    // compile 'com.google.android.gms:play-services:7.3.+'
+    // compile "group: $rootProject.ext.KAKAO_SDK_GROUP", name: 'kakaolink', "version: $rootProject.ext.KAKAO_SDK_VERSION"
+    compile 'com.kakao.sdk:kakaolink:1.0.50'
+    compile 'com.android.support:multidex:1.0.1'
+    // compile files('libs/bolts-android-1.1.3.jar')
+    compile files('libs/Parse-1.7.1.jar')
+    // compile 'com.android.support:support-annotations:23.3.0'
+    // compile 'com.intellij:annotations:12.0'
+    // Facebook Stetho
+    compile 'com.facebook.stetho:stetho:1.3.1'
+    // compile 'com.facebook.stetho:stetho-okhttp:1.3.1'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
+    // compile 'com.facebook.stetho:stetho-js-rhino:1.3.1'
+    // IDEScout.com
+    compile files('debug-libs/sqlscout-server-1.0.jar')
+    // compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha1'
+    // compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
+    compile 'com.google.firebase:firebase-core:9.4.0'
+    compile 'com.google.firebase:firebase-database:9.4.0'
+    compile 'com.google.firebase:firebase-storage:9.4.0'
+    compile 'com.firebaseui:firebase-ui:0.5.3'
+    compile 'com.android.support:recyclerview-v7:23.0.2'
+    compile 'com.android.support:cardview-v7:23.0.2'
+    compile 'com.google.firebase:firebase-auth:9.4.0'
+    compile 'com.google.android.gms:play-services-auth:9.4.0'
+    compile 'com.google.android.gms:play-services:9.4.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.3.+'
+}
+
+apply plugin: 'com.google.gms.google-services'

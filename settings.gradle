@@ -1,0 +1,7 @@
+include ':app'
+include ':libGoogleSpreadSheetREST'
+project(':libGoogleSpreadSheetREST').projectDir = new File(settingsDir, '../maxUniv/libGoogleSpreadSheetREST')
+include ':libAds'
+project(':libAds').projectDir = new File(settingsDir, '../../smartVideo/libAds')
+include ':libVolly'
+project(':libVolly').projectDir = new File(settingsDir, '../../smartVideo/libVolly')

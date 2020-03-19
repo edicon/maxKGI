@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="top_banner">#1b529e</color>
+    <color name="main_view_bg">#ffffff</color>
+    
+    <color name="main_menu_bg">#f0f0f0</color>
+    <color name="main_menu_fg">#b3b3b3</color>
+    
+    <color name="menu_bottom_bg">#b3b3b3</color>
+    <color name="menu_bottom_fg">#ffffff</color>
+    <color name="menu_bottom_divider">#ffffff</color>
+    <color name="menu_bottom_divider_black">#dededede</color>
+
+    <color name="menu_bottom_text_def">#ffffff</color>
+    <color name="menu_bottom_text_click">#fc03fc</color>
+    
+    <color name="list_divider">#b3b3b3</color> 
+    <color name="list_view_bg">#ffffff</color> 
+    <color name="member_info_left">#1b529e</color> 
+    <color name="member_info_right">#000000</color> 
+</resources>

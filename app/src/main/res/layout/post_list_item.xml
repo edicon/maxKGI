@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/list_view_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/postTitleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        android:gravity="left|center" >
+
+        <!-- android:ellipsize="end" marquee -->
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="제목: 공지 제목"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/member_info_left"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="공지 시간"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/member_info_left"
+            android:textStyle="normal"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/postContentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dip"
+        android:gravity="left" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="36dip"
+            android:layout_height="36dip"
+            android:layout_gravity="top"
+            android:scaleType="fitXY"
+            android:src="@drawable/pen"
+            android:gravity="top"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:layout_marginRight="3dip"
+            android:gravity="left"
+            android:text="공지 내용\n공지 1\n공지 2\n공지 3\n공지 4\n공지 5"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/member_info_right"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</LinearLayout>

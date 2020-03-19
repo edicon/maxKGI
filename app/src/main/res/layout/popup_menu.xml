@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dip"
+    android:layout_height="wrap_content"
+    android:background="@color/main_view_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/topBanner"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@color/top_banner"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/topLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:src="@drawable/top_logo"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/topTitle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/popup_menu"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dip"
+        android:background="@color/menu_bottom_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/popup_menu1"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_margin="5dip"
+            android:drawableRight="@drawable/ic_menu_forward"
+            android:gravity="center"
+            android:text="@string/popup_menu1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            layout="@layout/menu_devider_h" />
+
+        <TextView
+            android:id="@+id/popup_menu2"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_margin="5dip"
+            android:drawableRight="@drawable/ic_menu_forward"
+            android:gravity="center"
+            android:text="@string/popup_menu2"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            layout="@layout/menu_devider_h" />
+
+        <TextView
+            android:id="@+id/popup_menu3"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_margin="5dip"
+            android:drawableRight="@drawable/ic_menu_forward"
+            android:gravity="center"
+            android:text="@string/popup_menu3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            layout="@layout/menu_devider_h" />
+
+        <TextView
+            android:id="@+id/popup_menu4"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_margin="5dip"
+            android:drawableRight="@drawable/ic_menu_forward"
+            android:gravity="center"
+            android:text="@string/popup_menu4"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            layout="@layout/menu_devider_h" />
+
+        <TextView
+            android:id="@+id/popup_menu_setting"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_margin="5dip"
+            android:drawableRight="@android:drawable/ic_menu_preferences"
+            android:gravity="center"
+            android:text="@string/popup_menu_setting"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            layout="@layout/menu_devider_h" />
+
+        <TextView
+            android:id="@+id/popup_menu_close"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_margin="5dip"
+            android:drawableRight="@android:drawable/ic_menu_close_clear_cancel"
+            android:gravity="center"
+            android:text="@string/popup_menu_close"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            layout="@layout/menu_devider_h" />
+    </LinearLayout>
+
+</LinearLayout>

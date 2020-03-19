@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.maxk.notebook.maxkgi"
+    android:versionCode="20160408"
+    android:versionName="KGI-V1.0(201604)" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21"
+        tools:overrideLibrary="com.kakao.sdk" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- http://developer.android.com/training/camera/photobasics.html -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--
+  		IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+  		to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission
+        android:name="com.maxk.notebook.maxkgi.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.maxk.notebook.maxkgi.permission.C2D_MESSAGE" />
+
+    <!-- Phone Call -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- android:name=".MaxkApplication" android:name="android.support.multidex.MultiDexApplication" -->
+
+    <application
+        android:name=".MaxkApplication"
+        android:allowTaskReparenting="false"
+        android:icon="@drawable/ic_launcher_max"
+        android:label="@string/app_name_maxk"
+        tools:node="merge"
+        tools:replace="android:icon, android:label" >
+        <activity
+            android:name=".MaxkIntroActivity"
+            android:label="@string/app_name_maxk" >
+            <intent-filter>
+                <!--  -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+        <activity
+            android:name="com.maxk.notebook.db.LoadGoogleSheet"
+            android:label="@string/app_name_maxk" >
+            <intent-filter>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name=".MaxkMainActivity"
+            android:label="@string/app_name_maxk"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Member -->
+        <activity
+            android:name="com.maxk.notebook.member.MemberGroupListActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maxk.notebook.member.MemberListActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maxk.notebook.member.MemberInfoActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MemberGroup -->
+        <activity
+            android:name="com.maxk.notebook.member.division.MemberGroupS31Activity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maxk.notebook.member.division.MemberGroupS32Activity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maxk.notebook.member.division.MemberGroupS33Activity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maxk.notebook.member.division.MemberGroupS34Activity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maxk.notebook.member.division.MemberGroupS35Activity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Post -->
+        <activity
+            android:name="com.maxk.notebook.post.PostListActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maxk.notebook.post.PostWriteActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Misc. -->
+        <activity
+            android:name="com.maxk.notebook.info.InfoGroupActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maxk.notebook.info.InfoViewActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maxk.notebook.misc.SettingActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maxk.notebook.misc.LoginActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maxk.notebook.misc.PrefsActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maxk.notebook.misc.MapViewer"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Database. -->
+        <activity
+            android:name="com.maxk.notebook.db.SearchActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Parse API. -->
+        <activity
+            android:name="com.edicon.lib.parse.PushActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+        <activity
+            android:name=".PushReceiveActivity"
+            android:label="@string/app_name_maxk"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <!-- Parse Push -->
+        <service android:name="com.parse.PushService" />
+        <!-- Version 1.7.x : http://blog.parse.com/2014/09/30/android-push-gets-major-refresh/ -->
+        <!-- Default Receiver: <receiver android:name="com.parse.ParsePushBroadcastReceiver" -->
+        <receiver
+            android:name=".MaxkCustomReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!-- IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
+                <category android:name="com.maxk.notebook.maxkgi" />
+            </intent-filter>
+        </receiver>
+        <!-- Custom Receiver -->
+        <receiver
+            android:name=".PushCustomReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.maxk.notebook.univ.UPDATE_STATUS" />
+            </intent-filter>
+        </receiver>
+        <!-- Parse Push Icon -->
+        <meta-data
+            android:name="com.parse.push.notification_icon"
+            android:resource="@drawable/push_icon" />
+
+        <!-- AdMob for Google Play Service 4.0 -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <!-- The application's publisher ID assigned by AdMob
+        <meta-data
+            android:name="ADMOB_PUBLISHER_ID"
+            android:value="a14d5dd5e4e4b6c" />
+        -->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+        <!-- Blog -->
+        <activity android:name="com.maxk.notebook.blog.BlogMainActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.maxk.notebook.blog.BlogSingleActivity" />
+        <activity android:name="com.maxk.notebook.blog.PostActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name="com.maxk.notebook.blog.RegisterActivity" />
+        <activity android:name="com.maxk.notebook.blog.LoginActivity" />
+        <activity android:name="com.maxk.notebook.blog.SetupActivity" />
+    </application>
+
+</manifest>
