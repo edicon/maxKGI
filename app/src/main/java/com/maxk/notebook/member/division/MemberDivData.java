@@ -68,7 +68,8 @@ public class MemberDivData {
 		"부회장",
 		"감사",
 		"위원장",
-		"지역이사"		// 06
+		"지역이사",		// 06
+		"이사장"		// 06
 	};
 	
 	public static String[] MemberGroupS33Type = {

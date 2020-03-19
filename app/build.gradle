@@ -41,8 +41,8 @@ android {
     productFlavors {
         playStoreConfig {
             signingConfig signingConfigs.playStore
-            versionCode 20190319
-            versionName 'KGI-V1.6'
+            versionCode 20200319
+            versionName 'KGI-V2.7'
             minSdkVersion 16
             applicationId 'com.maxk.notebook.maxkgi'
             targetSdkVersion 26

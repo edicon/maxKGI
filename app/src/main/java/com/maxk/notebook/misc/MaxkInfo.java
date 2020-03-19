@@ -39,7 +39,7 @@ public class MaxkInfo {
 	public static boolean MAP_LINK				= true;
 	
 	public static boolean USE_AD				= false;
-	public static boolean LOGIN_TEST			= false;
+	public static boolean LOGIN_TEST			= true;
 	public static boolean CROP_MEMBER			= false;
 	
 	public static String phoneNo;

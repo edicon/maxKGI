@@ -60,7 +60,7 @@ public class MaxkMainActivity extends FragmentActivity {
         MaxkInfo.phoneNo		= MaxkUtils.getPhoneNo(this);
 
         if( BuildConfig.DEBUG && MaxkInfo.LOGIN_TEST )
-            MaxkInfo.phoneNo = "0101231234"; // Admin: 01031620365, 01038130453, 01092487258
+            MaxkInfo.phoneNo = "01047160022"; // Admin: 01031620365, 01038130453, 01092487258
 
         MaxkInfo.logOn = MaxkUtils.queryLogin( this, MaxkInfo.phoneNo );
         // MaxkInfo.logOn = true;
