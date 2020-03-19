@@ -7,3 +7,6 @@ member 사진
 -https://sites.google.com/site/edicondev/projects/maxk/kgi/image/member
 -https://sites.google.com/site/edicondev/projects/maxk/kgi/image/kgi18
 -https://sites.google.com/site/edicondev/projects/maxk/kgi/image/kgi18/rule
+
+# Testing
+LOGIN_TEST = true; // false: for release
